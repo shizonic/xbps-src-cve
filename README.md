@@ -25,6 +25,34 @@ the following:
 
 6. Print out 'CVE: $CVE SEVERTITY: $SEVERITY'
 
+#### FAQ
+
+Q: Why integrate it with xbps-src
+
+A: Like update-check, xbps-src is arch-independent and we can make use of our
+equivalent to the update file (cve-check) for some flexiblity, like ignoring
+CVEs that don't apply and fixing the version= and pkgname= variables if we 
+don't follow the ones in upstrea.
+
+Q: Why bash, awk, libxslt and wget
+
+A: I wanted the least dependencies as possible when dealing with this and i'm
+decent with bash which is already required for using xbps-src
+
+if pushed for maximum speed 'xsv' (which is written in rust) would be used
+
+Q: Is it official ?
+
+A: Not at the moment and most likely this will have a completely different face
+if it becomes
+
+
+#### TODO
+
+- Find a way to get rid of nvdcve2simple.xsl (Permissive alternative?)
+- Make it faster (do a single awk call for all packages ?)
+- Make it proper for merging into xbps-src
+
 #### LICENSE
 
 cve-check is licensed under BSD-2-Clause, the same as xbps-src
