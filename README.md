@@ -50,8 +50,11 @@ if it becomes
 #### TODO
 
 - Find a way to get rid of nvdcve2simple.xsl (Permissive alternative?)
-- Make it faster (do a single awk call for all packages ?)
 - Make it proper for merging into xbps-src
+
+- Optimize (ideas)
+	- Make a single awk call for all packages
+	- Remove lots of garbage from the csv files when they are first processed (OSes and Hardware)
 
 #### LICENSE
 
