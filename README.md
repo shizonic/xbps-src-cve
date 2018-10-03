@@ -23,7 +23,17 @@ the following:
 - Check the patches for the CVE string and if found assume the CVE is fixed
 - check if the CVE is available in the ignores= variable
 
-6. Print out 'CVE: $CVE SEVERTITY: $SEVERITY'
+6. Store the cve and severity and print out the format:
+
+PKG (PKGNAME) VERSION:
+  CVE-NUM CVE-SEV
+  [...]
+
+PKG -> Name of the package on the template
+PKGNAME -> Name of the package after sourcing cve-check and doing changes to
+VERSION -> Version of the package after sourcing cve-check
+CVE-NUM -> CVE number with CVE- prefix
+CVE-SEV -> CVE severity
 
 #### FAQ
 
